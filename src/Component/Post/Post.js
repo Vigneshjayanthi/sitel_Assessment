@@ -4,10 +4,10 @@ import {db} from '../../Firebase/Firebase'
     
     const deleteHandler = ()  =>{
      db.ref('Posts').child(post.i).remove()
-     window.location.href="/post"
+     window.location.href="/post";
        
     }
-    const editHandler =() =>{
+    const editChangeHandler =() =>{
         window.location.href="/post/edit/"+post.i;
     }
 //console.log(post)
@@ -18,7 +18,7 @@ import {db} from '../../Firebase/Firebase'
             <p>{post.content}</p>
             <div>
                 <button className="btn btn-danger" onClick={deleteHandler}>Delete</button>&nbsp;&nbsp;
-                <button className="btn btn-primary" onClick={editHandler}>Edit</button>
+                <button className="btn btn-primary" onClick={editChangeHandler}>Edit</button>
             </div>
             <hr/>
         </div>
